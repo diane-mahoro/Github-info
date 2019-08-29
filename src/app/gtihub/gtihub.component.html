@@ -10,9 +10,9 @@
 
 <body>
     <div class="container">
-        <p *ngFor='let users of user'>
+        <!-- <p *ngFor='let users of user'>
             Name: {{users.name}}
-        </p>
+        </p> -->
         <form >
             <label for="name">Github user name</label><br>
             <input type="text" name="name"> <br>
@@ -20,8 +20,7 @@
         </form>
     </div>
     <div class="row">
-   <p> Name{{repositories.name}}</p> <br>
-   <p>repositories{{repositories.biography}}</p>
+   <p> Name : {{repositories.name}}</p>
     </div>
 </body>
 </html>
