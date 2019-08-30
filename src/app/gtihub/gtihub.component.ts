@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import{ User } from '../user'
+// import{ User } from '../user'
 import { RequestService } from '../http-request/request.service'
-import { HttpClient } from '@angular/common/http';
+// import { HttpClient } from '@angular/common/http';
 import { Repository } from '../repository-class/repository';
 @Component({
   selector: 'app-gtihub',
@@ -9,12 +9,14 @@ import { Repository } from '../repository-class/repository';
   styleUrls: ['./gtihub.component.css']
 })
 export class GtihubComponent implements OnInit {
+  anotherprofile:any;
 
   // user:User;
   repositories: Repository;
   constructor( private profile:RequestService ) {
      this.profile.getprofileinfo().subscribe(profile =>{
        console.log(profile);
+       this.anotherprofile = profile;
      }); 
    }
 
