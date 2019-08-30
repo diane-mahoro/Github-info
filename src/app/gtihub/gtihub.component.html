@@ -25,8 +25,14 @@
    <p>repositories {{repositories.public_repos}}</p> -->
    <div *ngIf="profile">
    <div class="panel-default">
-       <div class="panel-heading">
-           {{anotherprofile.name}}
+       <div class="panel-heading" style="position:relative; left: 200px;">
+           {{anotherprofile.name}}  <br> <small>{{anotherprofile.login}}</small> <br>
+           <span>{{anotherprofile.location}}</span>
+           <div class="row">
+           <div class="col-md-12">
+               <img src="{{anotherprofile.avatar_url}}" alt="">
+           </div>
+           </div>
        </div>
    </div>
    </div>
