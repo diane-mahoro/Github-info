@@ -12,12 +12,16 @@ export class GtihubComponent implements OnInit {
   anotherprofile:any;
 
   // user:User;
-  repositories: Repository;
+  repositories: any;
   constructor( private profile:RequestService ) {
      this.profile.getprofileinfo().subscribe(profile =>{
        console.log(profile);
        this.anotherprofile = profile;
      }); 
+     this.profile.getrepos().subscribe(repos =>{
+       console.log(repos);
+       this.repositories=repos;
+     });
    }
 
   ngOnInit() {
