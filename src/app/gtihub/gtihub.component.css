@@ -1,0 +1,17 @@
+.card{
+    background-color: antiquewhite;
+    margin: 30px;
+}
+h1{
+    font-style: italic;
+    font-size: 35px;
+    text-align: center;
+    margin: 30px;
+    font-family: Sofia;
+}
+input{
+    width: 80%;
+}
+img{
+    border-radius: 50%;
+}

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Github shortcut</title>
 </head>
 
 <body>
@@ -13,26 +13,34 @@
         <!-- <p *ngFor='let users of use r'>
             Name: {{users.name}}
         </p> -->
+        <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+            <h1>GITHUB SHORT APP</h1>
+            </div>
+        </div>
+        </div>
+        
         <form>
             <label for="name">Github user name</label><br>
             <input type="text" name="name" [(ngModel)]="username" (keyup)="findprofile()"> <br>
-            <button type="submit"> submit</button>
         </form>
     </div>
     <div class="row">
-        <!-- <p> Name :{{repositories.login}}</p> -->
-        <!-- <p>Bio : {{repositories.bio}} </p>
-   <p>repositories {{repositories.public_repos}}</p> -->
+        <p> Name :{{repositories.login}}</p>
+        <p>Bio : {{repositories.bio}} </p>
+   <p>repositories {{repositories.public_repos}}</p>
         <div *ngIf="profile">
             <div class="panel-default">
                 <div class="panel-heading" style="position:relative; left: 200px;">
-                    {{anotherprofile.name}} <br> <small>{{anotherprofile.login}}</small> <br>
+                    <br> <small>{{anotherprofile.login}}</small> <br>
                     <span>{{anotherprofile.location}}</span>
                     <div class="row">
                         <div class="col-md-12">
                             <img src="{{anotherprofile.avatar_url}}" alt="">
                             <p>{{anotherprofile.bio}}</p>
                             <p>{{anotherprofile.public_repos}}</p>
+                            <p>{{anotherprofile.created_at|date}}</p>
                             <div>
                                 <h3>repositories</h3>
                                 <p *ngFor="let repo of repositories">{{repo.name}}:
