@@ -10,12 +10,12 @@
 
 <body>
     <div class="container">
-        <!-- <p *ngFor='let users of user'>
+        <!-- <p *ngFor='let users of use r'>
             Name: {{users.name}}
         </p> -->
         <form>
             <label for="name">Github user name</label><br>
-            <input type="search" name="name"> <br>
+            <input type="text" name="name" [(ngModel)]="username" (keyup)="findprofile()"> <br>
             <button type="submit"> submit</button>
         </form>
     </div>
@@ -34,15 +34,17 @@
                             <p>{{anotherprofile.bio}}</p>
                             <p>{{anotherprofile.public_repos}}</p>
                             <div>
-                            <h3>repositories</h3>
-                            <p *ngFor="let repo of repositories">{{repo.name}}:
-                                <button style="background-color: black;">
-                                    <a href="{{anotherprofile.html_url}}" style="color:white; padding: 10px; margin: 10px;">view this project on Github on Github</a>
-                                </button>
-                            </p>
+                                <h3>repositories</h3>
+                                <p *ngFor="let repo of repositories">{{repo.name}}:
+                                    <button style="background-color: black;">
+                                        <a href="{{anotherprofile.html_url}}" style="color:white; padding: 10px; margin: 10px;">view
+                                            this project on Github on Github</a>
+                                    </button>
+                                </p>
                             </div>
                             <button style="background-color: black;">
-                                <a href="{{anotherprofile.html_url}}" style="color:white; padding: 10px; margin: 10px;">view profile on Github</a>
+                                <a href="{{anotherprofile.html_url}}" style="color:white; padding: 10px; margin: 10px;">view
+                                    profile on Github</a>
                             </button>
                         </div>
                     </div>

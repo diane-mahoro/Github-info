@@ -18,5 +18,8 @@ private clientsecret ='199a054c2119968c86a978fe7c7fb996ef248248';
    getrepos(){
     return this.http.get("https://api.github.com/users/" + this.username + "/repos?client_id=" + this.clientid + "&client_secet=" + this.clientsecret);
    }
+   updateProfile(username:string){
+     this.username = username;
+   }
 }
   
