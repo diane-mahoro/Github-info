@@ -1,6 +1,21 @@
-# Github
+# Github shortcut App
+
+__*by Diane Mahoro*__
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.2.
+It was created to help user to reach out to github account without passing by github website
+
+# Tools used
+
+- Github API
+
+- VS code text editor
+
+- Google chrome browser
+
+- Git and Github
+
 
 ## Development server
 
@@ -25,3 +40,9 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Active link to this website
+
+
+
+## licenced under the terms of Diane Mahoro

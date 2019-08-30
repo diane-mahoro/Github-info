@@ -25,38 +25,37 @@
             <label for="name">Github user name</label><br>
             <input type="text" name="name" [(ngModel)]="username" (keyup)="findprofile()"> <br>
         </form>
-    </div>
-    <div class="row">
-        <!-- <p> Name :{{repositories.login}}</p>
-        <p>Bio : {{repositories.bio}} </p>
-   <p>repositories {{repositories.public_repos}}</p> -->
-        <div class="col-md-6">
-            <div *ngIf="profile">
-                <div class="panel-default">
-                    <div class="panel-heading" style="position:relative; left: 200px;">
-                        <br>
-                        <p>{{anotherprofile.login}} </p>
-                        <img src="{{anotherprofile.avatar_url}}" alt="">
-                    </div>
-                    <div class="col-md-6">
-                        <span>{{anotherprofile.location}}</span>
+        <div class="row">
+            <div class="col-md-6">
+                <div *ngIf="profile">
+                    <div class="panel-default">
+                        <div class="panel-heading" style="position:relative; left: 200px;">
+                            <br>
+                            <p> This is {{anotherprofile.login}} </p>
+                            <img src="{{anotherprofile.avatar_url}}" alt="">
+                        </div>
+                        <div class="col-md-6">
+                            <span>{{anotherprofile.location}}</span>
 
-                        <p>{{anotherprofile.bio}}</p>
-                        <p>{{anotherprofile.public_repos}}</p>
-                        <p>{{anotherprofile.created_at|date}}</p>
-                        <div>
-                            <h3>repositories</h3>
-                            <p *ngFor="let repo of repositories">{{repo.name}}:
+                            <p> Biography :{{anotherprofile.bio}}</p>
+                            <p>Date created {{anotherprofile.created_at|date}}</p>
+                            <p>Public repositories: {{anotherprofile.public_repos}}</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3>repositories</h3>
+                                <p *ngFor="let repo of repositories">{{repo.name}}:
+                                    <button style="background-color: black;">
+                                        <a href="{{anotherprofile.html_url}}" style="color:white; padding: 10px; margin: 10px;">view
+                                            this project on Github on Github</a>
+                                    </button>
+                                </p>
                                 <button style="background-color: black;">
                                     <a href="{{anotherprofile.html_url}}" style="color:white; padding: 10px; margin: 10px;">view
-                                        this project on Github on Github</a>
+                                        profile on Github</a>
                                 </button>
-                            </p>
+                            </div>
                         </div>
-                        <button style="background-color: black;">
-                            <a href="{{anotherprofile.html_url}}" style="color:white; padding: 10px; margin: 10px;">view
-                                profile on Github</a>
-                        </button>
                     </div>
                 </div>
             </div>

@@ -12,6 +12,10 @@ h1{
 input{
     width: 80%;
 }
+p{
+    font-style: italic;
+    font-size: 25px;
+}
 img{
     border-radius: 50%;
 }
