@@ -23,6 +23,13 @@
    <!-- <p> Name :{{repositories.login}}</p> -->
    <!-- <p>Bio : {{repositories.bio}} </p>
    <p>repositories {{repositories.public_repos}}</p> -->
+   <div *ngIf="profile">
+   <div class="panel-default">
+       <div class="panel-heading">
+           {{anotherprofile.name}}
+       </div>
+   </div>
+   </div>
     </div>
 </body>
 </html>
