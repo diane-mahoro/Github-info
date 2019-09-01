@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Github shortcut</title>
+    <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
 </head>
 
 <body>
@@ -27,36 +28,30 @@
         </form>
         <div class="row">
             <div class="col-md-6">
-                <div *ngIf="profile">
-                    <div class="panel-default">
-                        <div class="panel-heading" style="position:relative; left: 200px;">
-                            <br>
-                            <p> This is {{anotherprofile.login}} </p>
-                            <img src="{{anotherprofile.avatar_url}}" alt="">
-                        </div>
-                        <div class="col-md-6">
-                            <span>{{anotherprofile.location}}</span>
-
-                            <p> Biography :{{anotherprofile.bio}}</p>
-                            <p>Date created {{anotherprofile.created_at|date}}</p>
-                            <p>Public repositories: {{anotherprofile.public_repos}}</p>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <h3>repositories</h3>
-                                <p *ngFor="let repo of repositories">{{repo.name}}:
-                                    <button style="background-color: black;">
-                                        <a href="{{anotherprofile.html_url}}" style="color:white; padding: 10px; margin: 10px;">view
-                                            this project on Github on Github</a>
-                                    </button>
-                                </p>
-                                <button style="background-color: black;">
-                                    <a href="{{anotherprofile.html_url}}" style="color:white; padding: 10px; margin: 10px;">view
-                                        profile on Github</a>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+                <p>Log in Name: {{anotherprofile.login}} </p>
+                <img src="{{anotherprofile.avatar_url}}" alt="">
+            </div>
+            <div class="col-md-6" style="position:relative; top: 50px;">
+                <p> Name              :{{anotherprofile.name}}</p>
+                <p> Biography         :{{anotherprofile.bio}}</p>
+                <p>Location           : {{anotherprofile.location}}</p>
+                <p>Date created       : {{anotherprofile.created_at|date}}</p>
+                <p>Public repositories: {{anotherprofile.public_repos}}</p>
+                <button style="background-color: lightgrey;">
+                        <a href="{{anotherprofile.html_url}}" style="color:black; padding: 10px; margin: 10px;">view
+                            profile on Github</a>
+                    </button>
+            </div>
+            <div class="row">
+                <div class="col-md-12" style="position:relative; top: 30px;">
+                    <h3 style="font-size: 35px; text-align:center;">List of Repositories</h3>
+                    <hr style="width:5px; text-align:center;" style="text-align:center;">
+                    <p *ngFor="let repo of repositories">{{repo.name}}: <br>
+                        <button style="background-color: lightgrey;text-align:center;">
+                            <a href="{{anotherprofile.html_url}}" style="color: black; padding: 10px; margin: 10px;">view
+                                this project on Github on Github</a>
+                        </button>
+                    </p>
                 </div>
             </div>
         </div>

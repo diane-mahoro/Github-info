@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import{ User } from '../user'
+// import{ User } from '../user'
 import { RequestService } from '../http-request/request.service'
 // import { HttpClient } from '@angular/common/http';
 // import { Repository } from '../repository-class/repository';
@@ -11,7 +11,7 @@ import { RequestService } from '../http-request/request.service'
 export class GtihubComponent implements OnInit {
   anotherprofile:any;
 
-  users:User;
+  // users:User;
   repositories: any;
   username:string;
   constructor( private profile:RequestService) {
@@ -20,11 +20,11 @@ export class GtihubComponent implements OnInit {
    findprofile(){
    this.profile.updateProfile(this.username);
    this.profile.getprofileinfo().subscribe(profile =>{
-    console.log(profile);
+    // console.log(profile);
     this.anotherprofile = profile;
   }); 
   this.profile.getrepos().subscribe(repos =>{
-    console.log(repos);
+    // console.log(repos);
     this.repositories=repos;
   });
   }

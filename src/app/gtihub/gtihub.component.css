@@ -11,6 +11,7 @@ h1{
 }
 input{
     width: 80%;
+    margin-bottom: 20px;
 }
 p{
     font-style: italic;
@@ -18,4 +19,15 @@ p{
 }
 img{
     border-radius: 50%;
+}
+p{
+    font-family: Sofia;
+    font-style: italic;
+}
+h3{
+    text-align: center;
+}
+hr{
+    text-align: center;
+    width: 10px;
 }
